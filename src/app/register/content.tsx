@@ -536,10 +536,10 @@ export default function Content() {
               <div>
                 <label className="block text-white mb-2 font-medium">
                   Rate your mechanical skill{" "}
-                  <span className="text-red-500">*</span>
+                  <span className="text-red-500 ">*</span>
                 </label>
                 <div className="flex gap-4">
-                  {["Beginner", "Intermediate", "Advanced"].map((level) => (
+                  {["Beginner ", "Intermediate", "Advanced"].map((level) => (
                     <RadioButton
                       key={level}
                       name="mechanicalSkill"

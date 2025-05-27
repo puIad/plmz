@@ -18,7 +18,7 @@ const RadioButton: React.FC<RadioButtonProps> = ({
   variant = "white",
 }) => {
   return (
-    <label className="flex items-center gap-2 cursor-pointer">
+    <label className="flex items-center gap-1 sm:gap-2 cursor-pointer">
       <div className="relative">
         <input
           type="radio"
@@ -29,24 +29,10 @@ const RadioButton: React.FC<RadioButtonProps> = ({
           className="sr-only"
         />
         <div
-          className={`w-6 h-6 rounded-full border-2 ${
-            checked
-              ? variant === "white"
-                ? "border-white"
-                : "border-blue-500"
-              : "border-gray-400"
-          }`}
-        >
-          {checked && (
-            <div
-              className={`absolute inset-1 rounded-full ${
-                variant === "white" ? "bg-white" : "bg-blue-500"
-              }`}
-            ></div>
-          )}
-        </div>
+          className={`w-4 h-4 sm:w-6 sm:h-6 rounded-full ${checked ? variant === "white" ? "bg-white" : "bg-blue-500" : "border-2 border-gray-400"}`}
+        />
       </div>
-      <span className="text-white">{label}</span>
+      <span className="text-white text-xs sm:text-base">{label}</span>
     </label>
   );
 };
