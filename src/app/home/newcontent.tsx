@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative flex flex-col md:flex-row h-screen w-full overflow-visible -ml-6 mt-30 md:-ml-10 bg-[#0D0D0D]"
+      className="relative flex flex-col md:flex-row h-screen w-full overflow-visible -ml-6 mt-25 md:-ml-10 md:mt-0 bg-[#0D0D0D]"
     >
       {/* Left Section */}
       <motion.div
