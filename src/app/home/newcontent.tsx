@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 
 export default function Hero() {
   // Countdown target date (modify as needed)
-  const targetDate = new Date("2025-07-01T00:00:00").getTime();
+  const targetDate = new Date("2025-06-06T21:00:00").getTime();
 
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -27,7 +27,7 @@ export default function Hero() {
         setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
       } else {
         setTimeLeft({
-          days: Math.floor(distance / (1000 * 60 * 60 * 6 * 24)),
+          days: Math.floor(distance / (1000 * 60 * 60  * 24)),
           hours: Math.floor((distance / (1000 * 60 * 60)) % 24),
           minutes: Math.floor((distance / 1000 / 60) % 60),
           seconds: Math.floor((distance / 1000) % 60),
@@ -100,19 +100,19 @@ export default function Hero() {
         >
           <div className="bg-black border border-white rounded-xl px-4 py-2 text-center shadow-lg">
             <p className="text-lg font-bold">{timeLeft.days}</p>
-            <p className="text-sm text-white/70">D</p>
+            <p className="text-sm text-white/70">Days</p>
           </div>
           <div className="bg-black border border-white rounded-xl px-4 py-2 text-center shadow-lg">
             <p className="text-lg font-bold">{timeLeft.hours}</p>
-            <p className="text-sm text-white/70">H</p>
+            <p className="text-sm text-white/70">Hours</p>
           </div>
           <div className="bg-black border border-white rounded-xl px-4 py-2 text-center shadow-lg">
             <p className="text-lg font-bold">{timeLeft.minutes}</p>
-            <p className="text-sm text-white/70">M</p>
+            <p className="text-sm text-white/70">Minutes</p>
           </div>
           <div className="bg-black border border-white rounded-xl px-4 py-2 text-center shadow-lg">
             <p className="text-lg font-bold">{timeLeft.seconds}</p>
-            <p className="text-sm text-white/70">S</p>
+            <p className="text-sm text-white/70">Seconds</p>
           </div>
         </motion.div>
 
