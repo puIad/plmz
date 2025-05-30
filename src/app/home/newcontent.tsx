@@ -4,8 +4,40 @@ import Image from "next/image";
 import Link from "next/link";
 import ModelViewer from "./3d"; // Assuming 3d.js is in the same directory
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export default function Hero() {
+  // Countdown target date (modify as needed)
+  const targetDate = new Date("2025-07-01T00:00:00").getTime();
+
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance < 0) {
+        clearInterval(interval);
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+      } else {
+        setTimeLeft({
+          days: Math.floor(distance / (1000 * 60 * 60 * 6 * 24)),
+          hours: Math.floor((distance / (1000 * 60 * 60)) % 24),
+          minutes: Math.floor((distance / 1000 / 60) % 60),
+          seconds: Math.floor((distance / 1000) % 60),
+        });
+      }
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section
       id="home"
@@ -58,6 +90,31 @@ export default function Hero() {
           design and build a robot that can take on a challenging maze competed
           with intricate pathways and unexpected turns.
         </p>
+
+        {/* Countdown Timer */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.6, duration: 1 }}
+          className="ml-4 sm:ml-10 mb-5 text-white text-xl sm:text-2xl font-mono flex gap-2 flex-nowrap"
+        >
+          <div className="bg-black border border-white rounded-xl px-4 py-2 text-center shadow-lg">
+            <p className="text-lg font-bold">{timeLeft.days}</p>
+            <p className="text-sm text-white/70">D</p>
+          </div>
+          <div className="bg-black border border-white rounded-xl px-4 py-2 text-center shadow-lg">
+            <p className="text-lg font-bold">{timeLeft.hours}</p>
+            <p className="text-sm text-white/70">H</p>
+          </div>
+          <div className="bg-black border border-white rounded-xl px-4 py-2 text-center shadow-lg">
+            <p className="text-lg font-bold">{timeLeft.minutes}</p>
+            <p className="text-sm text-white/70">M</p>
+          </div>
+          <div className="bg-black border border-white rounded-xl px-4 py-2 text-center shadow-lg">
+            <p className="text-lg font-bold">{timeLeft.seconds}</p>
+            <p className="text-sm text-white/70">S</p>
+          </div>
+        </motion.div>
 
         <Link href="/register">
           <motion.button
