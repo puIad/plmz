@@ -1,5 +1,0 @@
----
-deployment:
-  tasks:
-    - export DEPLOYPATH=/home/vicpolym/public_html/tester.vic-polymaze.com
-    - /bin/cp -r * $DEPLOYPATH
