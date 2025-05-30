@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/your_cpanel_username/public_html/
+    - /bin/cp -R * $DEPLOYPATH # Copies all files from the repo to public_html
+    
