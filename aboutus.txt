@@ -17,3 +17,4 @@ d:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","cont
 8:null
 11:{"metadata":[["$","title","0",{"children":"POLYMAZE - Robotics Competition"}],["$","meta","1",{"name":"description","content":"Design and build a robot to conquer a complex maze filled with tricky paths and surprise turns."}],["$","link","2",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"4167x4167"}]],"error":null,"digest":"$undefined"}
 b:{"metadata":"$11:metadata","error":null,"digest":"$undefined"}
+nigga
