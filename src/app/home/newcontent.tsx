@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 
 export default function Hero() {
   // Countdown target date (modify as needed)
-  const targetDate = new Date("2025-06-06T21:00:00").getTime();
+  const targetDate = new Date("2025-06-08T21:00:00").getTime();
 
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
