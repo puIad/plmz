@@ -4,39 +4,39 @@ import Image from "next/image";
 import Link from "next/link";
 import ModelViewer from "./3d"; // Assuming 3d.js is in the same directory
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 
 export default function Hero() {
   // Countdown target date (modify as needed)
-  const targetDate = new Date("2025-06-08T21:00:00").getTime();
+  // const targetDate = new Date("2025-06-08T21:00:00").getTime();
 
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
+  // const [timeLeft, setTimeLeft] = useState({
+  //   days: 0,
+  //   hours: 0,
+  //   minutes: 0,
+  //   seconds: 0,
+  // });
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = targetDate - now;
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     const now = new Date().getTime();
+  //     const distance = targetDate - now;
 
-      if (distance < 0) {
-        clearInterval(interval);
-        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-      } else {
-        setTimeLeft({
-          days: Math.floor(distance / (1000 * 60 * 60  * 24)),
-          hours: Math.floor((distance / (1000 * 60 * 60)) % 24),
-          minutes: Math.floor((distance / 1000 / 60) % 60),
-          seconds: Math.floor((distance / 1000) % 60),
-        });
-      }
-    }, 1000);
+  //     if (distance < 0) {
+  //       clearInterval(interval);
+  //       setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  //     } else {
+  //       setTimeLeft({
+  //         days: Math.floor(distance / (1000 * 60 * 60  * 24)),
+  //         hours: Math.floor((distance / (1000 * 60 * 60)) % 24),
+  //         minutes: Math.floor((distance / 1000 / 60) % 60),
+  //         seconds: Math.floor((distance / 1000) % 60),
+  //       });
+  //     }
+  //   }, 1000);
 
-    return () => clearInterval(interval);
-  }, []);
+  //   return () => clearInterval(interval);
+  // }, []);
 
   return (
     <section
