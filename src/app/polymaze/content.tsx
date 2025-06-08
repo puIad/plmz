@@ -2,15 +2,16 @@ import ImageSwiper from "./swiper";
 
 export default function Content() {
   return (
-    <div id="polymaze" className="relative w-full h-screen mt-30 md:mt-0 bg-[#0D0D0D]">
-
-
+    <div
+      id="polymaze"
+      className="relative w-full h-screen my-30 md:mt-0 bg-[#0D0D0D]"
+    >
       {/* Content */}
       <div className="relative z-10 flex flex-col items-start justify-start gap-6 px-4 text-center sm:mr-[15%] sm:pl-20 pl-4">
         <div className="items-start justify-start ">
           <div className="flex flex-row items-start">
             {/* White vertical rectangle */}
-            
+
             <div className="bg-white w-2 h-16 mr-4 mt-40"></div>
 
             {/* Title */}
@@ -25,7 +26,6 @@ export default function Content() {
             </h1>
           </div>
 
-
           <p className="text-white/70 text-lg md:text-2xl max-w-3xl text-start">
             POLYMAZE is a maze-solving competition hosted by the Vision &
             Innovation Club. Designed robots rely on their programming and
@@ -35,8 +35,6 @@ export default function Content() {
         </div>
         <ImageSwiper />
       </div>
-
-
     </div>
   );
 }
