@@ -33,7 +33,7 @@ export default function Content() {
                 src="https://heyzine.com/flip-book/29f87c52a9.html"
               ></iframe>
               <a
-                href="https://drive.google.com/open?id=1GW_KnK4M2RS-M9Js4OF4_kX-C3lqlll0&usp=drive_copy"
+                href="https://drive.google.com/open?id=1nxvmm6yncyCUhldcfJmEY88iwrsP2P1C&usp=drive_copy"
                 download
                 className="bg-black text-white py-3 px-6 border border-white text-lg mt-4 hover:text-[#797979] hover:border-[#797979]"
               >
