@@ -61,14 +61,15 @@ export default function Navbar() {
       <div className="flex items-center justify-between p-4 px-6">
         {/* Logo */}
         <div className="flex items-center">
-          <Image
-            src="/logo.webp"
-            alt="Logo"
-            width={80}
-            height={80}
-            className="h-10 md:h-15 w-auto "
-            priority
-          />
+        <Image
+          src="/logo.webp"
+          alt="Logo"
+          width={80}
+          height={80}
+          className="h-10 md:h-15 w-auto "
+          priority
+        />
+
         </div>
 
         {/* Desktop Nav */}

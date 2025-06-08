@@ -1,12 +1,13 @@
 "use client";
 
 import ImageSwiper from "./swiper";
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
 export default function Content() {
   return (
-    <div id="testimonies">
+    <div id="testimonies" className="w-full min-h-screen relative bg-[#0D0D0D] lg:mt-40">
       <div className="content-container flex flex-col px-4 lg:w-11/12 sm:pl-20">
+      <div className="flex flex-row items-start pb-15"></div>
         <div className="flex flex-row items-start mb-10">
           <div className="bg-white w-2 h-16 mr-4"></div>
           <div className="text-start">
