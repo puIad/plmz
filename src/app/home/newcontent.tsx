@@ -123,7 +123,7 @@ export default function Hero() {
               boxShadow: "0 0 15px rgba(255, 255, 255, 0.5)",
             }}
             whileTap={{ scale: 0.98 }}
-            className="font-semibold bg-black text-white py-3 px-8 sm:py-4 sm:px-10 border border-white text-base sm:text-lg md:text-xl transition-all duration-300 hover:bg-white hover:text-black ml-4 sm:ml-10"
+            className="font-semibold bg-black text-white py-3 px-8 sm:py-4 sm:px-10 border border-white text-base sm:text-lg md:text-xl transition-all duration-300 hover:bg-white hover:text-black ml-4 sm:ml-10 relative z-50"
           >
             Register Now
           </motion.button>
