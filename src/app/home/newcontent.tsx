@@ -91,7 +91,7 @@ export default function Hero() {
           with intricate pathways and unexpected turns.
         </p>
 
-        {/* Countdown Timer */}
+        {/* Countdown Timer 
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -115,7 +115,7 @@ export default function Hero() {
             <p className="text-sm text-white/70">Seconds</p>
           </div>
         </motion.div>
-
+*/}
         <Link href="/register">
           <motion.button
             whileHover={{
