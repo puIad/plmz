@@ -98,7 +98,7 @@ export default function Homepage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 2.2 }}
-          className="flex justify-center gap-6 mt-2 flex-wrap"
+          className="flex justify-center gap-6 mt-2 flex-wrap relative z-50"
         >
           <Link href="/register">
             <motion.button

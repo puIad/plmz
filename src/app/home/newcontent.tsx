@@ -4,39 +4,39 @@ import Image from "next/image";
 import Link from "next/link";
 import ModelViewer from "./3d"; // Assuming 3d.js is in the same directory
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 
 export default function Hero() {
   // Countdown target date (modify as needed)
-  const targetDate = new Date("2025-07-01T00:00:00").getTime();
+  // const targetDate = new Date("2025-06-08T21:00:00").getTime();
 
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
+  // const [timeLeft, setTimeLeft] = useState({
+  //   days: 0,
+  //   hours: 0,
+  //   minutes: 0,
+  //   seconds: 0,
+  // });
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = targetDate - now;
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     const now = new Date().getTime();
+  //     const distance = targetDate - now;
 
-      if (distance < 0) {
-        clearInterval(interval);
-        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-      } else {
-        setTimeLeft({
-          days: Math.floor(distance / (1000 * 60 * 60 * 6 * 24)),
-          hours: Math.floor((distance / (1000 * 60 * 60)) % 24),
-          minutes: Math.floor((distance / 1000 / 60) % 60),
-          seconds: Math.floor((distance / 1000) % 60),
-        });
-      }
-    }, 1000);
+  //     if (distance < 0) {
+  //       clearInterval(interval);
+  //       setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  //     } else {
+  //       setTimeLeft({
+  //         days: Math.floor(distance / (1000 * 60 * 60  * 24)),
+  //         hours: Math.floor((distance / (1000 * 60 * 60)) % 24),
+  //         minutes: Math.floor((distance / 1000 / 60) % 60),
+  //         seconds: Math.floor((distance / 1000) % 60),
+  //       });
+  //     }
+  //   }, 1000);
 
-    return () => clearInterval(interval);
-  }, []);
+  //   return () => clearInterval(interval);
+  // }, []);
 
   return (
     <section
@@ -91,7 +91,7 @@ export default function Hero() {
           with intricate pathways and unexpected turns.
         </p>
 
-        {/* Countdown Timer */}
+        {/* Countdown Timer 
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -100,22 +100,22 @@ export default function Hero() {
         >
           <div className="bg-black border border-white rounded-xl px-4 py-2 text-center shadow-lg">
             <p className="text-lg font-bold">{timeLeft.days}</p>
-            <p className="text-sm text-white/70">D</p>
+            <p className="text-sm text-white/70">Days</p>
           </div>
           <div className="bg-black border border-white rounded-xl px-4 py-2 text-center shadow-lg">
             <p className="text-lg font-bold">{timeLeft.hours}</p>
-            <p className="text-sm text-white/70">H</p>
+            <p className="text-sm text-white/70">Hours</p>
           </div>
           <div className="bg-black border border-white rounded-xl px-4 py-2 text-center shadow-lg">
             <p className="text-lg font-bold">{timeLeft.minutes}</p>
-            <p className="text-sm text-white/70">M</p>
+            <p className="text-sm text-white/70">Minutes</p>
           </div>
           <div className="bg-black border border-white rounded-xl px-4 py-2 text-center shadow-lg">
             <p className="text-lg font-bold">{timeLeft.seconds}</p>
-            <p className="text-sm text-white/70">S</p>
+            <p className="text-sm text-white/70">Seconds</p>
           </div>
         </motion.div>
-
+*/}
         <Link href="/register">
           <motion.button
             whileHover={{
@@ -123,7 +123,7 @@ export default function Hero() {
               boxShadow: "0 0 15px rgba(255, 255, 255, 0.5)",
             }}
             whileTap={{ scale: 0.98 }}
-            className="font-semibold bg-black text-white py-3 px-8 sm:py-4 sm:px-10 border border-white text-base sm:text-lg md:text-xl transition-all duration-300 hover:bg-white hover:text-black ml-4 sm:ml-10"
+            className="font-semibold bg-black text-white py-3 px-8 sm:py-4 sm:px-10 border border-white text-base sm:text-lg md:text-xl transition-all duration-300 hover:bg-white hover:text-black ml-4 sm:ml-10 relative z-50"
           >
             Register Now
           </motion.button>
